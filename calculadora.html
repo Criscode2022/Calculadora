@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Calculadora</title>
+		<script src="calculadora.js"></script>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			#contenedor {
+				display: grid;
+				grid-template-columns: auto auto auto auto;
+				width: 50%;
+				margin: 0 auto;
+				gap: 10px;
+				padding: 5px;
+				border: solid 2px black;
+			}
+			#pantalla {
+				grid-column: 1/span 4;
+				font-size: 20pt;
+				text-align: right;
+			}
+			.dosColumnas {
+				grid-column: span 2;
+			}
+			[type="button"] {
+				height: 50px;
+				font-weight: bolder;
+				font-size: 14pt;
+				background-color: rgb(116, 190, 226);
+				border-radius: 20px;
+				box-shadow: 2px 2px 2px;
+			}
+			[type="button"]:hover {
+				background-color: rgb(38, 143, 189);
+			}
+			[type="button"]:active {
+				background-color: rgb(106, 129, 232);
+				transform: scale(0.95);
+				box-shadow: 1px 1px 2px;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="contenedor">
+			<input type="text" id="pantalla" value="0" readonly/>
+			<input class="dosColumnas" type="button" id="" value="Borrar Uno" onclick="borrarUno();"/>
+			<input class="dosColumnas" type="button" id="" value="Borrar Todo" onclick="borrarTodo();"/>
+			<input type="button" id="" value="7" onclick="pulsarNumero(7);"/>
+			<input type="button" id="" value="8" onclick="pulsarNumero(8);"/>
+			<input type="button" id="" value="9" onclick="pulsarNumero(9);"/>
+			<input type="button" id="" value="+" onclick="pulsarOperacion('+')"/>
+			<input type="button" id="" value="4" onclick="pulsarNumero(4);"/>
+			<input type="button" id="" value="5" onclick="pulsarNumero(5);"/>
+			<input type="button" id="" value="6" onclick="pulsarNumero(6);"/>
+			<input type="button" id="" value="-" onclick="pulsarOperacion('-')"/>
+			<input type="button" id="" value="1" onclick="pulsarNumero(1);"/>
+			<input type="button" id="" value="2" onclick="pulsarNumero(2);"/>
+			<input type="button" id="" value="3" onclick="pulsarNumero(3);"/>
+			<input type="button" id="" value="X" onclick="pulsarOperacion('*')"/>
+			<input type="button" id="" value="0" onclick="pulsarNumero(0);"/>
+			<input class="dosColumnas" type="button" id="btnIgual" value="=" onclick="pulsarIgual();"/>
+			<input type="button" id="" value="/" onclick="pulsarOperacion('/')"/>
+		</div>
+	</body>
+</html>
